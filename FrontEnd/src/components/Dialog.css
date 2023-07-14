@@ -1,0 +1,59 @@
+.react-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.react-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    max-width: 85vw;
+    
+    margin-bottom: 20px;
+
+    background-color: var(--clr-bg-primary);
+    border: none;
+    border-radius: 10px;
+    overflow-x: hidden;
+    animation: appear-from-bottom 0.3s ease-in-out;
+}
+
+.react-dialog .divider {
+    width: 100%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: var(--clr-bg-secondary);
+}
+
+.react-dialog form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.react-dialog form input {
+    width: 100%;
+    padding: 10px;
+}
+
+.react-dialog input,
+.react-dialog button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+@keyframes appear-from-bottom {
+    from { 
+        opacity: 0;
+        transform: translateY(100px); 
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}

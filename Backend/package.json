@@ -1,0 +1,21 @@
+{
+  "name": "sever-web-sockets",
+  "version": "1.0.0",
+  "description": "Server for BancoPoly",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node serv/index.js",
+    "dev": "nodemon serv/index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
